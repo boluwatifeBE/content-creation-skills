@@ -1,0 +1,44 @@
+---
+name: ux-glossary-explainer
+description: Explains a UX, product research, or product design term or concept clearly, for an audience that includes people newer to the field. Use whenever the user wants to explain a concept, demystify jargon, teach a term, or asks "what's the difference between X and Y," where X and Y are UX/research terms (usability vs UX, wireframe vs prototype, quant vs qual research, vibe coding vs traditional prototyping, and similar). Requires creator-context to be active. This is a field-specific pack skill for UX/Product Research and Design, if the user's stated persona doesn't include either, flag a soft warning before proceeding. Directly serves education-focused content goals and junior-audience segments.
+---
+
+# UX Glossary Explainer
+
+Field pack skill for **UX/Product Research and Design**. Takes a term or concept from the field and turns it into a clear explainer, the content type that most directly serves education goals and junior audience members, per `creator-context`'s content goals menu.
+
+## Field match check (required first step)
+
+Check whether the user's stated field(s) in `creator-context` include UX, product research, product design, UX engineering, or a clear equivalent. If not, surface a soft warning and ask whether to proceed anyway.
+
+## Getting the term
+
+Ask whether the user has a specific term or concept in mind, or wants suggestions. If suggestions are wanted, propose a few based on genuinely common points of confusion in this field (usability vs. UX, UX vs. UI, IA vs. UX, wireframe vs. prototype, quant vs. qual research, persona vs. user segment, vibe coding vs. traditional prototyping, design-to-code vs. developer handoff, and similar), rather than an arbitrary list, and let the user pick.
+
+## Getting the definition right before explaining anything
+
+Before writing an explainer, be certain the underlying definition is actually correct. For well-established field terms, this is usually straightforward. For fast-moving or contested terms, especially anything related to AI-assisted workflows or vibe coding, where usage is still settling and different practitioners mean slightly different things, say so honestly rather than presenting one definition as the only correct one, or search to check current, credible usage if there's real uncertainty. An explainer that confidently teaches an inaccurate or oversimplified definition actively misleads a junior audience trying to learn from it, which is a worse outcome than a shorter, honestly-hedged explainer.
+
+## Building the explanation
+
+A good explainer in this field does three things, don't skip any of them for the sake of brevity:
+
+- **A clear, correct definition**, stated plainly, no jargon used to explain jargon
+- **A concrete example or analogy**, abstract definitions don't stick, a real or realistic scenario makes the term usable rather than just memorized. Ask the user if they have a real project example they can reference (checking first whether it needs anonymization, hand off to `ux-confidential-story` if so), or default to a clear hypothetical if they don't have one or don't want to use real work
+- **What it's commonly confused with**, and the actual distinction, this is often the most valuable part for a junior reader, since the term alone rarely causes confusion, the boundary between it and an adjacent term usually does
+
+## Tailoring to the audience
+
+If the user's stated audience mixes senior and junior readers, keep the core explanation foundational and genuinely clear (not condescending, just unambiguous), then add one layer of nuance or edge case that rewards a senior reader for staying through the whole piece, a caveat, an exception, a place where even experienced practitioners disagree. If the audience is senior-only, the piece can lead with the nuance rather than the basic definition.
+
+## Format
+
+Produce a **short-form draft** (a crisp definition plus the single most useful distinction) and a **long-form draft** (the fuller explanation with example and nuance), per the user's platform format classifications. The short-form version shouldn't just be a truncated long-form piece, it should stand alone as genuinely useful even without the extra depth.
+
+## House style and voice
+
+Apply the confirmed house style. Avoid the trap of writing explainers in a flatter, more textbook register than the rest of the user's content, an explainer should still sound like the same person who wrote everything else, not a separate, more formal "teaching voice."
+
+## Presenting the output
+
+Present both drafts clearly labeled. If the definition required any hedging (a genuinely contested or fast-moving term), keep that honesty visible in the copy itself rather than smoothing it into false confidence for the sake of a cleaner-sounding post.
