@@ -258,7 +258,7 @@ If you're extending this system, these are the rules every skill in this repo al
 4. **Never invent a number.** No skill in this system fabricates a metric, a testing result, or a performance figure. If real data doesn't exist, the skill says so rather than filling the gap with something plausible-sounding.
 5. **Fact vs. read, strictly separated**, especially for anything about a real, named third party (a company, a public figure, a competitor). An interpretive claim about someone else's intent or results must be framed as a read, never presented as confirmed.
 6. **Field packs stay explicit.** No bundled "creative professional" or "business person" catch-all pack. Every discipline gets its own named pack. Combine two only when they're genuinely inseparable in practice (like branding's two disciplines), and even then, let the user decide, don't assume it for them.
-7. **Neutral in core, specific in packs.** Core skills must never leak field-specific examples or assumptions (this happened once during development, see the git history / CONTRIBUTING notes for the actual case study). Pack skills, by contrast, should lean into field-specific vocabulary and examples deliberately, that's the entire point of a pack.
+7. **Neutral in core, specific in packs.** Core skills must never leak field-specific examples or assumptions. Pack skills, by contrast, should lean into field-specific vocabulary and examples deliberately, that's the entire point of a pack. See [CONTRIBUTING.md](CONTRIBUTING.md#the-core-vs-pack-neutrality-problem-a-real-case-study) for the actual incident that produced this rule.
 8. **Disclosure is not optional where it applies.** Any skill covering tools, platforms, or products must ask about paid/affiliate relationships and require disclosure in the drafted copy itself if one exists, not just a note to the user.
 9. **Confidentiality gets a dedicated, explicit skill, not a bolt-on.** Any pack involving client-facing work includes a `<field>-confidential-story` skill, and every skill that could expose client details defers to it rather than attempting a lighter anonymization pass inline.
 10. **Say when something's thin.** Case studies, reviews, and analyses should call out weak or unsupported sections honestly rather than padding them to look complete.
@@ -280,7 +280,7 @@ Each `SKILL.md` follows the Agent Skills format: YAML frontmatter (`name`, `desc
 
 ## Contributing
 
-This system is intentionally built to grow. New fields, new skills, and refinements to existing ones are all welcome.
+This system is intentionally built to grow. New fields, new skills, and refinements to existing ones are all welcome. The short version of each path is below, see **[CONTRIBUTING.md](CONTRIBUTING.md)** for the full guide, including SKILL.md format requirements, a validation checklist, and the real case study behind the core-vs-pack neutrality rule.
 
 ### Updating an existing skill
 
