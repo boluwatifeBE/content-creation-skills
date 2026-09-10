@@ -39,6 +39,10 @@ Produce a **short-form draft** (a crisp definition plus the single most useful d
 
 Apply the confirmed house style. Avoid the trap of writing explainers in a flatter, more textbook register than the rest of the user's content, an explainer should still sound like the same person who wrote everything else, not a separate, more formal "teaching voice."
 
+## Carousel option
+
+A term explainer often works well as a carousel: a definition slide, an example slide, a common-confusion slide. Ask the user if they'd rather present this explainer as a carousel instead of (or alongside) the two-draft output, and if so, hand off to `social-copywriting`'s carousel structure rather than building slides here.
+
 ## Presenting the output
 
 Present both drafts clearly labeled. If the definition required any hedging (a genuinely contested or platform-specific term), keep that honesty visible in the copy itself rather than smoothing it into false confidence for the sake of a cleaner-sounding post.

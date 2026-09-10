@@ -61,6 +61,10 @@ Follow the platform-pairing rule used across this system: one **short-form draft
 
 Recommend a visual to pair with the content: the asset itself (cropped, annotated, or presented as-is), a derived visual, or something new entirely. Hand off to `visual-direction` for a fuller recommendation if that skill is active, otherwise give a short, concrete suggestion inline.
 
+## Carousel option
+
+This content type often works well as a carousel too, a single asset naturally breaks into a title slide, a few points about what it shows, and a lesson slide. Ask the user if they'd rather have this as a carousel instead of (or alongside) the two-draft output, and if so, hand off to `social-copywriting`'s carousel structure rather than building slides here.
+
 ## Presenting the output
 
 Present both drafts as plain text, ready to copy and paste, clearly labeled by which platform pair each is for. Lead with a one or two sentence summary of what the asset is and the lesson pulled from it, so the user can sanity-check the read before scanning the full drafts.

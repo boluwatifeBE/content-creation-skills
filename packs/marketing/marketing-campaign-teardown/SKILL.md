@@ -48,6 +48,10 @@ Produce one **short-form draft** and one **long-form draft**, per the user's pla
 
 This skill cannot reproduce the campaign's actual copyrighted creative directly. Suggest the user attach their own screenshot of the actual ad or campaign material when they post, rather than generating or recreating it.
 
+## Carousel option
+
+A point-by-point critique often works well as a carousel, each framework point or fact-vs-read observation becoming its own slide. Ask the user if they'd rather present this critique as a carousel instead of (or alongside) the two-draft output, and if so, hand off to `social-copywriting`'s carousel structure rather than building slides here.
+
 ## Presenting the output
 
 Lead with a one or two sentence summary of the subject and the core angle, followed by both drafts, clearly labeled. If the user wants a more one-sided piece (all-critical or all-complimentary) rather than a balanced teardown, that's their call, ask if unclear which they want.

@@ -77,7 +77,14 @@ Capture:
 
 - **Account name/business**, if different from their personal name
 - **Target audience**: who follows or should follow this account, and their main friction point or interest
-- **Primary platforms, open list with known defaults**: Instagram, X, LinkedIn, and Medium have built-in format pairing already defined elsewhere in this system (Instagram/X as short-hook format, LinkedIn/Medium as long-form format). If the user names a platform outside these four (Substack, Facebook, Threads, or anything else), capture it too, then ask two quick questions: is this closer to short-form or long-form, and are there any length or style norms specific to it worth noting. Store the answer as that platform's format classification so downstream skills can treat it like the closest matching pair, rather than needing a hardcoded rule for every platform that exists.
+- **Primary platforms, open list with known defaults, three format tiers**: this system classifies platforms into three tiers, not two, since a platform's actual character limit changes what's realistically writable there. The built-in platforms and their known tiers:
+  - **Short-form**: X (280 characters), Threads posts (500 characters) and topic tags (50 characters), Instagram/TikTok Story captions (120 characters)
+  - **Platform-native long post**: Instagram/TikTok main post captions (2,200 characters), Facebook post/reel captions (5,000 characters), LinkedIn Standard Post (3,000 characters)
+  - **True long-form article**: LinkedIn Article, Medium, Substack (no practical character limit)
+
+  Note that LinkedIn spans two different tiers depending on which format the user means, a LinkedIn Standard Post (capped, platform-native long post tier) and a LinkedIn Article (uncapped, true long-form tier) are genuinely different formats on the same platform. If the user just says "LinkedIn" without specifying which, ask which they mean, or capture both if they use both.
+
+  If the user names a platform outside this list, capture it, then ask two questions: roughly what character limit does it have (or does it have none), and are there any length or style norms specific to it worth noting. Use the stated limit to place it in the correct tier (roughly under 500 characters is short-form, roughly 500 to 5,000 is platform-native long post, no practical limit is true long-form article, but let the user's actual answer decide rather than forcing it into a bucket that doesn't fit). Store the platform's name, its tier, and its specific character limit so downstream skills can check drafts against it directly, rather than needing a hardcoded rule for every platform that exists.
 - **Content goals**: present this menu in plain language and let them pick more than one, most people are chasing several at once:
   - **Authority** — be seen as someone who knows this field deeply
   - **Education** — teach followers something they didn't know

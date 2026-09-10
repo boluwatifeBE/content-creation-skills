@@ -47,6 +47,10 @@ Apply the confirmed house style. Case studies can tolerate slightly more structu
 
 Ask what visual material exists (before/after shots, process documentation, final applications) and recommend which would strengthen the piece, defer to `visual-direction` for a fuller recommendation if that skill is active.
 
+## Carousel option
+
+A case study's arc maps unusually well onto a carousel, each stage of the arc can become one or two slides. Ask the user if they'd rather present this case study as a carousel instead of (or alongside) the long-form piece, and if so, hand off to `social-copywriting`'s carousel structure, one slide per arc stage, rather than building slides here.
+
 ## Presenting the output
 
 Present the case study clearly labeled by arc stage or with clear section breaks, so the user can see the structure at a glance. If any stage is thin (a weak insight, an unclear result), say so honestly rather than padding it, a case study missing a real insight or result is weaker for the reader even if it's longer.
