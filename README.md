@@ -2,7 +2,7 @@
 
 A modular system of [Agent Skills](https://agentskills.io) for social media content creation, built for Claude. One shared foundation captures who you are and how you write, once. Everything else, planning, drafting, analysis, and field-specific specialist skills, reads from that foundation instead of guessing or repeating itself.
 
-This is not a single "write my posts" skill. It's a small operating system for content creation: a **core** of field-agnostic tools that work for literally any profession, plus **field packs** that add real, framework-grounded depth for specific disciplines (branding, UX, marketing, and more to come).
+This is not a single "write my posts" skill. It's a small operating system for content creation: a **core** of field-agnostic tools that work for literally any profession, plus **field packs** that add real, framework-grounded depth for specific disciplines (branding, UX, marketing, fashion, and more to come).
 
 ---
 
@@ -12,11 +12,13 @@ This is not a single "write my posts" skill. It's a small operating system for c
 - [Installing a skill](#installing-a-skill)
 - [How the system is structured](#how-the-system-is-structured)
 - [Defaults vs. what you control](#defaults-vs-what-you-control)
+- [Content formats: platform tiers and carousels](#content-formats-platform-tiers-and-carousels)
 - [The core skills (11)](#the-core-skills-11)
 - [Field packs](#field-packs)
   - [Branding (Brand Identity Design + Brand Strategy)](#branding-pack)
   - [UX / Product Research](#ux-pack)
   - [Business Marketing](#marketing-pack)
+  - [Fashion](#fashion-pack)
 - [How to use this system](#how-to-use-this-system)
   - [Core skills alone](#core-skills-alone)
   - [Core + one field pack](#core--one-field-pack)
@@ -102,6 +104,15 @@ packs/
     marketing-tool-and-platform-spotlight/
     marketing-confidential-story/
 
+  fashion/                   Fashion design, styling/blogging, and the industry generally
+    fashion-asset-to-content/
+    fashion-content-ideation/
+    fashion-collection-critique/
+    fashion-case-study-builder/
+    fashion-glossary-explainer/
+    fashion-brand-and-product-spotlight/
+    fashion-confidential-story/
+
   <your-field>/               More packs welcome, see Contributing
 ```
 
@@ -127,6 +138,46 @@ packs/
 
 ---
 
+## Content formats: platform tiers and carousels
+
+Every skill that produces or reshapes content in this system works against real platform constraints, not vague "short vs. long" guessing. There are two independent things going on: **platform tiers** (for continuous posts) and **carousels** (a separate, platform-independent format).
+
+### The three platform tiers
+
+Platforms are grouped into three tiers by actual character limit, not by feel:
+
+| Tier | Platforms | Limit |
+|---|---|---|
+| Short-form | X | 280 characters |
+| Short-form | Threads (post) | 500 characters |
+| Short-form | Threads (topic tag) | 50 characters |
+| Short-form | Instagram / TikTok (Story caption) | 120 characters |
+| Platform-native long post | Instagram / TikTok (main caption) | 2,200 characters (~300–400 words) |
+| Platform-native long post | Facebook (post/reel caption) | 5,000 characters |
+| Platform-native long post | LinkedIn Standard Post | 3,000 characters |
+| True long-form article | LinkedIn Article | No practical limit |
+| True long-form article | Medium | No practical limit |
+| True long-form article | Substack | No practical limit |
+
+**LinkedIn spans two tiers, and that distinction matters.** A LinkedIn Standard Post is capped at 3,000 characters, closer in scale to a Facebook post than to a Medium article. A LinkedIn Article has no cap at all. These are genuinely different formats on the same platform, and `social-copywriting` will ask which one you mean rather than assuming, a long-form piece written for the Article tier will not fit a Standard Post, and every skill that produces or checks a draft in this system verifies the actual character count before presenting it, so this doesn't surface as a surprise after the fact.
+
+Custom platforms outside this list get their own limit captured in `creator-context` and classified into whichever tier actually fits, rather than being forced into one of the three by default.
+
+### Carousels: a fourth, platform-independent format
+
+A carousel (a multi-slide post, published as images or a PDF) isn't bound to any platform's character limit, the platform just hosts the slides you design. Because of that, it's not part of the tier system above, it's a separate format any calendar slot or piece of copy can be, regardless of which platforms it eventually gets posted to.
+
+When you ask for a carousel, `social-copywriting` produces:
+- A **title/hook slide**
+- A **framing slide** (a sharper headline plus a short setup)
+- **Body slides**, one distinct point per slide
+- A **closing slide** with a real engagement question
+- **Visual direction for every slide**, concrete enough to actually design from, since providing that direction is this system's job; building the actual slide images is yours
+
+`content-calendar` can mark any slot as a carousel instead of a standard post, and `content-repurposing` can turn an existing long-form piece into a carousel (or consolidate carousel slides back into continuous prose) as its own kind of transformation, distinct from resizing between tiers.
+
+---
+
 ## The core skills (11)
 
 These work for *any* field. No persona-specific assumptions live in any of them.
@@ -135,15 +186,15 @@ These work for *any* field. No persona-specific assumptions live in any of them.
 - **`creator-context`** — the skill everything else reads from. Captures format scope, house style, your persona (one or more fields), a generated identity/philosophy you confirm or edit, and your business profile (platforms, audience, goals). Run this first, or whenever you want to reset.
 
 **Planning & writing**
-- **`content-calendar`** — plans hooks, short captions, and long-form angles across a timeframe. Inline table by default, downloadable spreadsheet/doc on request or for longer plans.
-- **`social-copywriting`** — writes the actual, publish-ready copy for a specific piece, short-form or long-form, based on your platform's format classification.
+- **`content-calendar`** — plans a core topic per slot and distributes it across your active platforms on the same day by default (not one platform per day), each version adapted to its platform's tier and limit. Any slot can be marked as a carousel instead. Inline table by default, downloadable spreadsheet/doc on request or for longer plans.
+- **`social-copywriting`** — writes the actual, publish-ready copy for a specific piece, sized correctly for its platform's real character limit (short-form, platform-native long post, or true long-form article), or built as a carousel with per-slide visual direction. Checks the draft against the actual limit before presenting it.
 
 **Quality & iteration**
 - **`voice-qa`** — checks a draft against your confirmed house style (banlist, punctuation, tone, formatting) and flags specific fixes. Never invents nitpicks on a clean draft.
-- **`content-repurposing`** — compresses long-form into short-form, or expands short-form into long-form. Not summarizing, not padding, real structural transformation.
+- **`content-repurposing`** — moves content between platform tiers (scaling the rewrite's depth to how far apart the tiers are) or into/out of a carousel. Not summarizing, not padding, real structural transformation.
 
 **Discoverability**
-- **`hashtag-and-keyword`** — recommends hashtags (short-form platforms) or SEO keywords/tags (long-form platforms), generated fresh from your actual persona and the specific piece, never from a generic template.
+- **`hashtag-and-keyword`** — recommends hashtags (post-format platforms, X through LinkedIn Standard Post) or SEO keywords/tags (true long-form article platforms), generated fresh from your actual persona and the specific piece, never from a generic template.
 
 **Research & analysis**
 - **`analyse-content`** — analyzes someone else's existing content (a link, upload, or batch of several) and recommends how the underlying approach could translate into your own context. Stops at the recommendation, you decide the next step.
@@ -202,6 +253,20 @@ Every field pack shares two baseline skills (`<field>-asset-to-content`, `<field
 | `marketing-glossary-explainer` | Explains marketing terms (CAC vs. LTV, MQL vs. SQL, brand vs. performance marketing). |
 | `marketing-tool-and-platform-spotlight` | Reviews a marketing tool or ad platform. Actively asks about paid/affiliate relationships rather than waiting to be told, given how normalized undisclosed sponsorship is in this content category. |
 | `marketing-confidential-story` | Anonymizes a real client or campaign story, with specific figures (spend, revenue, conversion rate) treated as sensitive even without a client name attached. |
+
+### Fashion pack
+
+**Fashion**, covering fashion design, fashion blogging/styling, and the fashion industry generally, kept as one pack since the same content system needs to serve a senior designer's craft commentary and a stylist's outfit-based content equally well.
+
+| Skill | What it does |
+|---|---|
+| `fashion-asset-to-content` | Mines an uploaded fashion asset, a sketch, tech pack, lookbook, fabric board, runway photo, or an outfit/look photo, into a lesson-driven post. |
+| `fashion-content-ideation` | Topic ideas from silhouette and construction, textile sourcing, trend cycles, sustainability, sizing/inclusivity, and styling principles. |
+| `fashion-collection-critique` | Critiques a public collection or runway show. Never asserts a designer's intent or a collection's commercial performance without a real, cited source. |
+| `fashion-case-study-builder` | Concept → Development → Execution → Result arc for a finished design project, keeping the sampling/fitting development stage explicit rather than skipped. |
+| `fashion-glossary-explainer` | Explains fashion terms (haute couture vs. ready-to-wear, bespoke vs. made-to-measure, fast vs. slow fashion). |
+| `fashion-brand-and-product-spotlight` | Reviews a specific garment or brand. Mandatory disclosure of gifted items, affiliate links, or paid partnerships, given how scrutinized this exact content category is; treats fit and sustainability claims with extra care since both are easy to overstate. |
+| `fashion-confidential-story` | Anonymizes a real client or collaboration story, with unreleased/pre-show collection details treated as a higher-stakes category given embargo risk. |
 
 ---
 
@@ -319,6 +384,8 @@ If you're contributing to a **core** skill, watch for this: any illustrative exa
 **Can I edit a skill after installing it?** Yes. On claude.ai, you can edit skill files in-chat (highlight text, "Edit with Claude") or re-upload a modified version. Since these are your files once downloaded, you can also edit the `SKILL.md` directly and re-upload.
 
 **What happens if my field doesn't have a pack yet?** You can still use all 11 core skills fully. Field-specific skills (asset mining, teardown, case studies, glossary, tool spotlight, confidential story) simply aren't available until someone builds that pack, see [Proposing a new field pack](#proposing-a-new-field-pack) if that's you.
+
+**Do I need to design carousel images myself?** Yes. This system writes the slide-by-slide text and gives you concrete per-slide visual direction, imagery, layout emphasis, what to feature where, but turning that into actual designed images or a PDF is on you (or whatever design tool/person you hand it to). The skills stop at content and direction, not image production.
 
 **Why does everything ask so many questions before producing content?** Because the alternative, confidently generating content from assumptions, is what makes AI-written content sound generic, or worse, makes it state something false about a real person, a real client, or a real result. The questions are the actual value of this system, not friction to be minimized.
 
